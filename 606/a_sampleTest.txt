@@ -1,0 +1,15 @@
+Sample test
+4 4 0
+2 1 2
+
+Yes
+Sample test
+5 6 1
+2 7 2
+
+No
+Sample test
+3 3 3
+2 2 2
+
+Yes

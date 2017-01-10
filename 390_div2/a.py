@@ -19,35 +19,36 @@ def split_array():
 	tail = 0
 	res = []
 	possible = True
-	if tb[0][a-1] != 0:
-		print 'YES'
-		print 1
-		print '%s %s' %(1, a)
-		return 
+	
 		
 	while tail < a:
+
 		if tail == a -1:
 			if tb[head][tail] == 0:
 				possible = False
 				break
 			else:
 				res.append([head+1, tail+1])
-				k += 1
+
 				tail += 1
 		else:
-			if tb[head][tail] == 0:
+			if tb[head][a-1] != 0:
+				res.append([head+1, a])
+
+				break
+			elif tb[head][tail] == 0:
 				tail += 1
 			else:
 				res.append([head+1, tail+1])
 				head = tail+1
 				tail = tail +1
-				k += 1
+
 
 	if not possible:
 		print "NO"
 	else:
 		print 'YES'
-		print k
+		print len(res)
 		for each in res:
 			print ' '.join(map(str, each))
 
